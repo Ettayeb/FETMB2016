@@ -1,0 +1,35 @@
+<ion-view view-title="Découvrez le Forum" style='background : white;'>
+<ion-content has-header='true'>
+
+        <ion-header-bar align-title='center' class="bar bar-subheader bar-dark">
+          <div class='item-icon-left item-icon-right'>
+          <i class="icon ion-android-arrow-back" ng-if='jeudi' ng-click='back()'></i>
+          <h1 class="title">{{data.title}}</h1>
+          <i class="icon ion-android-arrow-forward" ng-if='mercredi' ng-click='forward()'></i>
+
+          </div>
+        </ion-header-bar>
+<img src='{{data.image}}' class='program' >
+
+
+  <div class="cosline">
+  <a class="tab-item item_program" href='{{data.link1}}{{data.jour}}' ng-bind-html="data.title1">
+  </a>
+  <a class="tab-item item_program" href='{{data.link2}}{{data.jour}}' ng-bind-html="data.title2" >
+  </a>
+  <a class="tab-item item_program" href='{{data.link3}}{{data.jour}}'  ng-bind-html="data.title3">
+  </a>
+  </div>
+  <div class="cosline">
+  <a class="tab-item item_program" href='{{data.link4}}{{data.jour}}' ng-bind-html="data.title4">
+  </a>
+  <a class="tab-item item_program" href='{{data.link5}}{{data.jour}}' ng-bind-html="data.title5">
+  </a>
+  <a class="tab-item item_program" href='{{data.link6}}{{data.jour}}' ng-bind-html="data.title6">
+  </a>
+  </div>
+</ion-content>
+
+  
+  
+</ion-view>

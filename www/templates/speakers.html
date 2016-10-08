@@ -1,0 +1,15 @@
+<ion-view view-title='Speakers'>
+  
+  <ion-content>
+    <div class="list">
+
+    <a class="item item-avatar speakers" ng-repeat='d in data' href='#/app/speakers/{{d.id}}'>
+      <img src="http://192.168.100.42/uploads/{{d.image}}">
+      <h2>{{d.titre}}</h2>
+      <p>{{d.lien}}</p>
+    </a>
+
+</div>
+    
+  </ion-content>
+</ion-view>

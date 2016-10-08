@@ -1,0 +1,107 @@
+<ion-side-menus enable-menu-with-back-views="true" >
+  
+<ion-side-menu-content class="leftmenu" >
+
+    <ion-nav-bar class="bar bar-header bar-assertive" align-title='center'>
+      <ion-nav-back-button>
+      </ion-nav-back-button>
+      <ion-nav-buttons side="left">
+        <button class="button button-icon button-light ion-navicon" menu-toggle="left">
+        </button>
+      </ion-nav-buttons>
+      <ion-nav-buttons side='right'>
+  <button class="button button-icon button-clear ion-android-more-vertical" menu-toggle="right">
+  </button>
+      </ion-nav-buttons>
+    </ion-nav-bar>
+    <ion-nav-view name="menuContent"></ion-nav-view>
+
+</ion-side-menu-content>
+
+  <ion-side-menu side="left">
+    <ion-header-bar class="bar-assertive">
+        <div class='col col-center text-center'>
+      <img src='img/logo2.png' class="text-center col-center" width=40% height=72%>
+        </div>
+    </ion-header-bar>
+    <ion-content>
+      <ion-list>
+
+        <ion-item class='transparent item item-icon-left' menu-close href="#/app/forum">
+          <i class='icon ion-ios-paperplane-outline'></i>
+            Présentation Forum
+        </ion-item>
+        <ion-item class='transparent item item-icon-left' menu-close href="#/app/nouveautes">
+          <i class='icon ion-social-rss-outline'></i>
+            Nouveautés 2016
+        </ion-item>
+        <ion-item class='transparent item item-icon-left' menu-close href="#/app/exposants">
+          <i class='icon ion-calendar'></i>
+            Exposants
+        </ion-item>
+        <ion-item class='transparent item item-icon-left' menu-close href="#/app/exposition">
+          <i class='icon ion-ios-location-outline'></i>
+            Plan de l'exposition
+        </ion-item>
+        <ion-item class='transparent item item-icon-left' menu-close href="#/app/program">
+          <i class='icon ion-clipboard'></i>
+            Programme
+        </ion-item>
+        <ion-item class='transparent item item-icon-left' menu-close href="#/app/speakers">
+          <i class='icon ion-person-stalker'></i>
+            Speakers
+        </ion-item>
+        <ion-item class='transparent item item-icon-left' menu-close href="#/app/infos">
+          <i class='icon ion-ios-information-outline'></i>
+            Infos Pratiques
+        </ion-item>
+        <ion-item class='transparent item item-icon-left' menu-close href="#" onclick="window.open('http://www.forumelearningtunisie.com/reservation/badges', '_system', 'location=yes'); return false;">
+          <i class='icon ion-card'></i>
+            Réserverz votre badge
+        </ion-item>
+      </ion-list>
+        <ion-item class='suivez col col-center'>
+              <h5 class='col text-center col-center'>Suivez nous !</h5>
+              <div class='social_items'>
+              <a href='#' onclick="window.open('https://www.facebook.com/Forum.Elearning.Tunisie', '_system', 'location=yes'); return false;" class='soc_item'><img class='icon' src='img/menu/facebook.png'></a>
+              <a href='#' onclick="window.open('https://twitter.com/elearning_tn', '_system', 'location=yes'); return false;" class='soc_item'><img class='icon' src='img/menu/twitter.png'></a>
+              <a href='#' onclick="window.open('https://www.linkedin.com/company/forum-e-learning-tunisie', '_system', 'location=yes'); return false;" class='soc_item'><img class='icon' src='img/menu/linkedin.png'></a>
+              <a href='#' onclick="window.open('https://plus.google.com/+Forumelearningtunisie', '_system', 'location=yes'); return false;" class='soc_item'><img class='icon' src='img/menu/google-plus.png'></a>
+              <a href='#' onclick="window.open('https://www.flickr.com/photos/forum-elearning-tunisie/albums', '_system', 'location=yes'); return false;" class='soc_item'><img class='icon' src='img/menu/flickr.png'></a>
+              <a href='#' onclick="window.open('https://www.youtube.com/user/elearningwebtv', '_system', 'location=yes'); return false;" class='soc_item'><img class='icon' src='img/menu/youtube.png'></a>
+              </div>    
+        </ion-item>
+
+    </ion-content>
+  </ion-side-menu>
+  
+          <ion-side-menu side="right">
+          
+          <ion-header-bar class="bar-assertive">
+        <div class='col col-center text-center'>
+            <h1 class="title col-center text-center">Paramètres</h1>
+        </div>
+          </ion-header-bar>
+          
+          <ion-content>
+      <ion-list>
+        <ion-item class='transparent padding_item item-icon-left' menu-close href="#/app/login" ng-if='!connected'>
+          <i class='icon ion-person-add'></i>
+            Connexion
+        </ion-item>
+        <ion-item class='transparent padding_item item-icon-left' menu-close  href="#" ng-click="logout()" ng-if='connected'>
+          <i class='icon ion-social-rss-outline'></i>
+            Déconnexion
+        </ion-item>
+        <ion-item class='transparent padding_item item-icon-left'>
+            Version 0.0.1
+        </ion-item>
+      </ion-list>
+          </ion-content>
+          
+        </ion-side-menu>
+
+          
+        </ion-side-menu-content> 
+
+</ion-side-menus>

@@ -1,0 +1,47 @@
+<ion-view view-title="Connexion">
+  <ion-content>
+<div class='row  centered'>
+   <div class="col">
+       <img src='img/logo.png' width='70%'>
+   </div>
+</div>
+<div class='row'>
+  <div class='col col-center text-center'>
+  <form ng-submit='login()'>
+<div class="list">
+  <label class="item item-input">
+    <i class="input-label icon ion-person"></i>
+    <input type="text" ng-model='data.email' placeholder='E-mail'>
+  </label>
+  <label class="item item-input">
+    <i class="input-label icon ion-key"></i>
+    <input type="password" ng-model='data.password' placeholder='Mot de Passe'>
+  </label>
+  <button type='submit' class="button button-assertive connect">
+  CONNECTEZ-VOUS
+  </button>
+</div>
+</form>
+</div>
+</div>
+<div class='row'>
+  <div class='col col-center text-center'>
+  <a ng-click='openModal()'><h5>S'ENREGISTRER</h5></a>
+  </div>
+  <div class='col col-center text-center'>
+  <h5>MOT DE PASSE OUBLIE</h5>
+  </div>
+</div>
+<div class="suivez">
+              <h5 class='col text-center col-center'>Suivez nous !</h5>
+              <div class='social_items'>
+              <a href='#' onclick="window.open('https://www.facebook.com/Forum.Elearning.Tunisie', '_system', 'location=yes'); return false;" class='soc_item'><img class='icon' src='img/menu/facebook.png'></a>
+              <a href='#' onclick="window.open('https://twitter.com/elearning_tn', '_system', 'location=yes'); return false;" class='soc_item'><img class='icon' src='img/menu/twitter.png'></a>
+              <a href='#' onclick="window.open('https://www.linkedin.com/company/forum-e-learning-tunisie', '_system', 'location=yes'); return false;" class='soc_item'><img class='icon' src='img/menu/linkedin.png'></a>
+              <a href='#' onclick="window.open('https://plus.google.com/+Forumelearningtunisie', '_system', 'location=yes'); return false;" class='soc_item'><img class='icon' src='img/menu/google-plus.png'></a>
+              <a href='#' onclick="window.open('https://www.flickr.com/photos/forum-elearning-tunisie/albums', '_system', 'location=yes'); return false;" class='soc_item'><img class='icon' src='img/menu/flickr.png'></a>
+              <a href='#' onclick="window.open('https://www.youtube.com/user/elearningwebtv', '_system', 'location=yes'); return false;" class='soc_item'><img class='icon' src='img/menu/youtube.png'></a>
+              </div>
+</div>
+</ion-content>
+</ion-view>

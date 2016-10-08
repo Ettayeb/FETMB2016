@@ -1,0 +1,71 @@
+<ion-view style='background : white;'>
+<ion-content>
+<div class="list card">
+  </br>
+    <h2>{{data.titre}}</h2>
+  <div class="item item-thumbnail-left">
+     <img ng-if='data.image' src="http://192.168.100.42/uploads/{{data.image}}">
+     <h2>{{data.facebook}}</h2>
+    <p>{{data.heure}}</p>
+    
+  </div>
+
+  <div class="item item-body">
+    <p>
+      {{data.description}}
+    </p>
+    <p>
+      <a href="#" class="subdued">{{data.likes}} J'aime</a>
+      <a href="#" class="subdued">{{data.comments}} Commentaires</a>
+    </p>
+  </div>
+
+</div>
+
+<div class="list" ng-repeat='comment in comments'>
+
+  <div class="item item-divider" >
+    {{comment.creator}}
+  </div>
+
+  <div class="item">
+    {{comment.comment}}
+  </div>
+</div>
+  <div ng-if='!connected'>   </br></br></br>  </div>
+
+<div class="list" ng-if='connected'>
+  <label class="item item-input">
+    <textarea ng-model='data.comment' placeholder="Commentaire"></textarea>
+  </label>
+  <button class='button button-block button-assertive' ng-click='commenter()' > Commenter </button>
+  </br></br></br>
+</div>
+
+
+
+</ion-content>
+<div class="tabs tabs-icon-only">
+  <a class="tab-item" ng-click='like()' ng-if='connected'>
+    <i class="icon ion-ios-heart"></i>
+  </a>
+  <a class="tab-item" ng-click='requirelogin()' ng-if='!connected'>
+    <i class="icon ion-ios-heart"></i>
+  </a>
+
+  <a class="tab-item" ng-click='bottom()' ng-if='connected'>
+    <i class="icon ion-ios-chatbubble"></i>
+  </a>
+  <a class="tab-item" ng-click='requirelogin()' ng-if='!connected'>
+    <i class="icon ion-ios-chatbubble"></i>
+  </a>
+
+<a class='tab-item' ng-click="share()">
+      <i class='icon ion-android-share-alt'></i>
+
+</a>
+  <a class='tab-item' ng-click='myGoBack()'>
+    <i class='icon ion-ios-undo'></i>
+  </a>
+</div>
+</ion-view>

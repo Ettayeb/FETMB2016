@@ -1,0 +1,40 @@
+<ion-modal-view class='ion-modal-view'>
+    <ion-header-bar align-title="center" class='bar-assertive'>
+    <h1 class="title">S'ENREGISTRER</h1>
+    <div class="buttons">
+       <i class='icon ion-close-round button-assertive close_icon' ng-click="closeSignup()"></i>
+    </div>
+</ion-header-bar>
+<ion-content class="padding">
+<form ng-submit='signup()'>
+  <div class="list">
+  <label class="item item-input inscription">
+    <input type="text" ng-model='signupform.prenom' placeholder="Prénom">
+  </label>
+  <label class="item item-input inscription">
+    <input type="text" ng-model='signupform.nom' placeholder="Nom">
+  </label>
+  <label class="item item-input inscription">
+    <input type="text" ng-model='signupform.email' placeholder="E-mail">
+  </label>
+  <label class="item item-input inscription">
+    <input type="text" ng-model='signupform.username' placeholder="Nom d'utilisateur">
+  </label>
+  <label class="item item-input inscription">
+    <input type="password" ng-model='signupform.password' placeholder="Mot de Passe">
+  </label>
+  <label class="item item-input inscription">
+    <input type="password" ng-model='signupform.confirm_pass' placeholder="Confirmation mot de passe">
+  </label>
+
+</div>
+<div class="row">
+<div class="col text-center">
+  <button type='submit' class="button button-assertive connect text-center">
+  S'ENREGISTRER
+</button>
+</div>
+</div>
+</form>
+ </ion-content>
+</ion-modal-view>

@@ -1,0 +1,57 @@
+<ion-view view-title="Speaker" style='background : white;'>
+<ion-content>
+<div class="list">
+
+  <div class="item item-divider text-center">
+    {{data.titre}}
+  </div>
+  <div class="item item-body">
+    <center><img class="full-image1" src="http://192.168.100.42/uploads/{{data.image}}"></center>
+    <p class='text-center'>{{data.lien}}</p>
+    <p>
+      {{data.description}}
+    </p>
+    <p class='text-center' style='float: right'>
+<div class='list text-center' style='display:inline-flex;'>
+  <a href='#' ng-click="GotoLink(data.facebook)" class='links text-center' ng-if='data.facebook' >
+    <img class='links_inside text-center' src='img/facebook-logo-button.png'>
+  </a>
+  <a href='#' ng-click="GotoLink(data.heure)" class='links text-center' ng-if='data.heure' >
+    <img class='links_inside text-center' src='img/twitter-logo-button.png'>
+  </a>
+  <a href='#' ng-click="GotoLink(data.linkedin)" class='links text-center' ng-if='data.linkedin' >
+    <img class='links_inside text-center' src='img/linkedin-button.png'>
+
+  </a>
+</div>
+
+    </p>
+
+    </br></br>
+  </div>
+
+</div>
+</ion-content>
+<div class="tabs tabs-icon-top">
+  <a class="tab-item" ng-click='like()' ng-if='connected'>
+    <i class="icon ion-star"></i>
+    {{data.likes}}
+  </a>
+  <a class="tab-item" ng-click='requirelogin()' ng-if='!connected'>
+    <i class="icon ion-star"></i>
+        {{data.likes}}
+  </a>
+
+  <a class="tab-item" disabled>
+    <i class="icon"></i>
+  </a>
+
+<a class='tab-item' ng-click="share()">
+      <i class='icon ion-android-share-alt'></i>
+
+</a>
+  <a class='tab-item' ng-click='myGoBack()'>
+    <i class='icon ion-ios-undo'></i>
+  </a>
+</div>
+</ion-view>
